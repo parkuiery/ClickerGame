@@ -35,9 +35,15 @@ fun NicknameTextField(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         if (initEdit || isEdit) {
-            TextField(value = text, onValueChange = onTextChange)
+            TextField(
+                value = text,
+                onValueChange = onTextChange,
+                singleLine = true,
+            )
         } else {
-            Text(text = text)
+            Text(
+                text = text
+            )
         }
         IconButton(onClick = {
             if (isEdit) onCheckClick()
