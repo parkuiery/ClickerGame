@@ -1,11 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
+    id("com.google.gms.google-services")
+    kotlin("plugin.serialization")
 }
 
 android {
     namespace = "com.uiel.clickergame"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.uiel.clickergame"
@@ -66,4 +69,25 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.database)
+
+    implementation("androidx.navigation:navigation-compose:2.8.8")
+
+    implementation("com.squareup.okhttp3:okhttp-sse:4.12.0")
+    implementation("com.launchdarkly:okhttp-eventsource:3.0.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation("org.jetbrains.kotlin:kotlin-serialization-compiler-plugin:2.1.10")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+
 }
