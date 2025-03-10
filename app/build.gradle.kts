@@ -72,7 +72,6 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
-    implementation(libs.firebase.database)
 
     implementation("androidx.navigation:navigation-compose:2.8.8")
 
@@ -89,5 +88,4 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
-
 }
