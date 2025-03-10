@@ -39,6 +39,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.uiel.clickergame.component.ClickToShakeText
@@ -88,7 +89,7 @@ fun HomeScreen(
                 repeatMode = RepeatMode.Reverse
             ), label = ""
         )
-        Text(text = "현재 등수 : ${uiState.rank}")
+        Text(text = stringResource(id = R.string.now_rank) +" : ${uiState.rank}")
         Spacer(modifier = Modifier.height(40.dp))
         NicknameTextField(
             text = uiState.nickName,
